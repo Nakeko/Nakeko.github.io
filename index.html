@@ -1,42 +1,525 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="assets/images/favicon.png" rel="icon" />
+    <title>Bakonyi Bakugánok</title>
+
+    <!-- Stylesheet
+============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+    <!-- Highlight Syntax -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
 </head>
-<body>
-<h2>Csoport: Bakonyi Bakugánok</h2>
-<h2>1. feladat</h2>
-<h2>Projekt terv</h2>
-<h1 align="center">Szoftverfejlesztés Projekt terv</h1>
 
-<p align="center">Gyakorlatvezető:</p>
-<h3 align="center"> Árvai László</h3>
- 
-<h2>1.</h2>
-<p>Csoport tagjai: Nagy Keve Koppány, Szabó Marcell, Petró Ádám, Berecz Kornél Olivér</p>
-<h2>2.</h2>
-<p>A vízesésmodell mintájára fogjuk megprobálni megvalósítani a projektet. Jó választásnak tűnik később dokumentáció szempontjából és segít lépésről lépésre haladni. </p>
+<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
 
-<p>Mérföldkövek lesznek majd a játék csinálása során a menü megvalósítása, a 
-    karakter kidolgozása, mozgásának kidolgozása. A pálya létrehozása és a pályán lévő elemek formálása és interakciója a karakterrel. </p>
-    <h2>3.</h2>
-<p>. A fejlesztési környezet a Godot-ban lesz. A fejlesztő enginben használunk majd GDScript, C# és Java.</p>
-<h2>4.</h2>
-<p>Használni fogunk a projekt során különböző 2D-s pálya és karakterkészítőket mint a Tiled, valamint probálunk majd újrafelhasználni kódokat már létező programokból</p>
-<h2>5.</h2>
-<p>. Dokumentáni fogjuk a fejlesztési folyamatokat, a játék mechanikáit, szintjeit, dizájnjait.
-     A különböző hangok, animációk, modellek is dokumentálásra kerülnek. Ezeket a fejlesztés közben dokumentáljuk és az elkészültel összesítjük.</p>
-     <p>6.Héten: Vízió elkészítése</p>
-     <p>8.Héten: SRS dokumentum elkészítése</p>
-     <p>11.Héten: Analízis modell elkészítése</p>
-     <h2>6.</h2>
-<p>. A játékot magunk fogjuk tesztelni bemutató előtt, kijavítjuk az esetleges hibákat és újratesztelünk amíg elfogadható eredményt nem kapunk.</p>
-<h2>7.</h2>
-<p>A  projekt bemutatása a gyakorlaton fog történni</p>
-<h2>8.</h2>
-<p> Források: </p>
-<p> Tanárúr jegyzetei - https://users.iit.uni-miskolc.hu/~mileff/szoftvert.html </p>
-   <p> Godot docs - https://docs.godotengine.org/en/stable/index.html</p>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
 
+    <!-- Document Wrapper   
+=============================== -->
+    <div id="main-wrapper">
+
+        <!-- Header
+  ============================ -->
+        <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+                <div class="container-fluid">
+                    <!-- Sidebar Toggler -->
+                    <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none"
+                        type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+                    <!-- Logo -->
+                    <a class="logo ml-md-3" href="index.html" title="Bakonyi Bakugánok"> <img
+                            src="assets/images/logo.png" alt="Bakonyi Bakugánok" /> </a>
+                    <span class="text-2 ml-2"></span>
+                    <!-- Logo End -->
+        </header>
+        <!-- Header End -->
+
+        <!-- Content
+  ============================ -->
+        <div id="content" role="main">
+
+            <!-- Sidebar Navigation
+	============================ -->
+            <div class="idocs-navigation bg-light">
+                <ul class="nav flex-column ">
+                    <li class="nav-item"><a class="nav-link active" href="#h1_start">H1</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#h1_start">Rövid leírás</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_ft">Fejlesztői terv</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_pny">Programozói nyelvek,
+                                    fejlesztői környezet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_ht">Használni tervezett
+                                    eszközök, technikák</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_lpeli">Leendő produktumok, és
+                                    létrejöttük ideje</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_tk">Tesztelési
+                                    követelmények</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_beszmi">Bemutatás és szállítás
+                                    módja, ideje</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h1_forr">Források</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#h2_be">H2 <span class="badge badge-success"> ADDED
+                            </span></a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#h2_be">Bevezetés</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_aah">Az Alkalmazás helye</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_eef">Érintettek és felhasználók</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_ava">A végtermék áttekintése</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_avj">A végtermék jellemzői</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_kr">Korlátozások</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_me">Minőségi elvárások</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_dkk">Dokumentációkkal kapcsolatos
+                                    követelmények</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_kl">Kockázat lista</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#h2_szt">Szótár</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">H3 <span class="badge badge-info"> SOON
+                            </span></a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">H4 <span class="badge badge-info"> SOON
+                            </span></a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">H5 <span class="badge badge-info"> SOON
+                            </span></a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">H6 <span class="badge badge-info"> SOON
+                            </span></a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                        </ul>
+                    </li>
+
+            </div>
+
+            <!-- Docs Content
+	============================ -->
+            <div class="idocs-content">
+                <div class="container">
+
+                    <!-- BEVEZETŐ H1
+		============================ -->
+                    <section id="h1_start">
+                        <h1>H1</h1>
+                        <h2>Bevezető</h2>
+                        <p class="lead">Gyakorlat vezető:</p>
+                        <p> Árvai László</p>
+                        <p class="lead">Csoport tagok:</p>
+                        <p>Nagy Keve Koppány</p>
+                        <p>Szabó Marcell</p>
+                        <p>Petró Ádám</p>
+                        <p>Berecz Kornél Olivér</p>
+                        <p>Berki Viktor</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Fejlesztői terv H1
+		============================ -->
+                    <section id="h1_ft">
+                        <h2>Fejlesztői terv</h2>
+                        <p>A vízesésmodell mintájára fogjuk megprobálni megvalósítani a projektet. Jó választásnak
+                            tűnik később dokumentáció szempontjából és segít lépésről lépésre haladni.</p>
+                        <p>Mérföldkövek lesznek majd a játék csinálása során a menü megvalósítása, a karakter
+                            kidolgozása,
+                            mozgásának kidolgozása. A pálya létrehozása és a pályán lévő elemek formálása és
+                            interakciója a karakterrel.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Programozói nyelvek, fejlesztői környezet H1
+		============================ -->
+                    <section id="h1_pny">
+                        <h2>Programozói nyelvek, fejlesztői környezet</h2>
+                        <p>A fejlesztési környezet a Godot-ban lesz. A fejlesztő enginben használunk majd GDScript, C#
+                            és Java.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Használni tervezett eszközök, technikák H1
+		============================ -->
+                    <section id="h1_ht">
+                        <h2>Használni tervezett eszközök, technikák</h2>
+                        <p>Használni fogunk a projekt során különböző 2D-s pálya és karakterkészítőket mint a Tiled,
+                            valamint probálunk majd újrafelhasználni kódokat már létező programokból.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Leendő produktumok, és létrejöttük ideje H1
+		============================ -->
+                    <section id="h1_lpeli">
+                        <h2>Leendő produktumok, és létrejöttük ideje</h2>
+                        <p>Dokumentáni fogjuk a fejlesztési folyamatokat, a játék mechanikáit, szintjeit, dizájnjait.
+                            A különböző hangok, animációk, modellek is dokumentálásra kerülnek. Ezeket a fejlesztés
+                            közben
+                            dokumentáljuk és az elkészültel összesítjük.</p>
+                        <p>6.Héten: Vízió elkészítése.</p>
+                        <p>8.Héten: SRS dokumentum elkészítése.</p>
+                        <p>11.Héten: Analízis modell elkészítése.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Tesztelési követelmények H1
+		============================ -->
+                    <section id="h1_tk">
+                        <h2>Tesztelési követelmények</h2>
+                        <p>A játékot magunk fogjuk tesztelni bemutató előtt, kijavítjuk az esetleges hibákat és
+                            újratesztelünk amíg elfogadható eredményt nem kapunk.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Bemutatás és szállítás módja, ideje H1
+		============================ -->
+                    <section id="h1_beszmi">
+                        <h2>Bemutatás és szállítás módja, ideje</h2>
+                        <p>A projekt bemutatása a gyakorlaton fog történni.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Források H1
+		============================ -->
+                    <section id="h1_forr">
+                        <h2>Források</h2>
+                        <p>Tanárúr jegyzetei - <a
+                                href="https://users.iit.uni-miskolc.hu/~mileff/szoftvert.html">https://users.iit.uni-miskolc.hu/~mileff/szoftvert.html</a>
+                        </p>
+                        <p>Godot docs - <a
+                                href="https://docs.godotengine.org/en/stable/index.html">https://docs.godotengine.org/en/stable/index.html</a>
+                        </p>
+                    </section>
+
+                    <hr class="divider">
+                    <hr class="divider">
+
+                    <!-- BEVEZETÉS H2
+		============================ -->
+                    <section id="h2_be">
+                        <h1>H2</h1>
+                        <h2>Bevezetés</h2>
+                        <p>Az általunk készült programot objektum-orientált körülmények között lett tervezve. Egy olyan
+                            jákékszoftvert igyekeztünk készíteni, amely kihívások elé állítja a játékost és katarzis
+                            érhető el egy-egy szint teljesítésekor. Már
+                            a létező Cat Mario-t vettük mintának.
+                        </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Az Alkalmazás helye H2
+		============================ -->
+                    <section id="h2_aah">
+                        <h2>Az Alkalmazás helye</h2>
+                        <p> </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Érintettek és felhasználók H2
+		============================ -->
+                    <section id="h2_eef">
+                        <h2>Érintettek és felhasználók</h2>
+                        <p> </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- A végtermék áttekintése H2
+		============================ -->
+                    <section id="h2_ava">
+                        <h2>A végtermék áttekintése</h2>
+                        <p class="lead">4.1 A termék kapcsolatai:</p>
+                        <p>
+                            A Godot motort használjuk a játék grafikus és játéklogikai részeinek fejlesztéséhez. Ez a
+                            motor lehetővé teszi a játékgrafika, animációk és szcenáriumok létrehozását.
+                            A C# programozási nyelvet használjuk a játéklogika megvalósításához a Godot motorban. C#
+                            segítségével vezérelhetjük a játékmenetet, reagálhatunk az eseményekre, és implementálhatjuk
+                            a játékos interakciókat.
+                            Az Access adatbázist használjuk az adatok tárolására, például a játék állapotát,
+                            eredményeket vagy felhasználói adatokat. Az adatbázis segít az adatok hosszú távú
+                            tárolásában és elemzésében.
+                            A program grafikáját, nagyon fontosnak tartjuk a lehető legjobbra megcsinálni, hisz ezzel
+                            találkozik a felhasználó. Ehhez nagyobbrészt Az Adobe Illustartor nevű programot fogjuk
+                            használni, a vektorgrafikák létrehozásához. Kisebb részt pedig a Photoshoppot, amihez
+                            csapatunk több tagja ért. De szem előtt tartva, hogy az előbbi opcionálisabb, így törekszünk
+                            mindent abban csinálni. Ezen programokban tervezett elemek is nagyszerűen integrálhatók a
+                            Godot motorba.
+                            Ezen technológiai eszközök együttműködése lehetővé teszi, hogy hatékonyan fejlesszünk egy
+                            rage game típusú játékot. A Godot motor grafikai és játékmenetkészítő funkciói kombinálva a
+                            C# programozási nyelvvel és az Access adatbázissal lehetővé teszik a játék létrehozását,
+                            adatok kezelését és játékmenet vezérlését.</p>
+                        <p class="lead">4.2 A termék használatának előnyei</p>
+                        <p>A játékunk egyedül is játszható, ez fejleszti a reflexet, az ügyességet, a koncentráció
+                            képességet, de leginkább a kitartást, hisz egy rage game-ről beszélünk.
+                            viszont lesz a játékban többjátékos mód is, mikor barátainkkal kooperativan játszhatunk, így
+                            nem okoz a játék bezártságot, hisz a játék közben is barátainkkal vagyunk, velük beszélünk.
+                            A többjátékos mód azért is jó, mert így statisztikailag többet játszanak a játékunkkal, mely
+                            növeli a játék pozitív visszajelzéseit.</p>
+                        <p class="lead">4.3. Feltételezések és függőségek</p>
+                        <p>A rage game fejlesztése során számos feltételezés és függőség merül fel, amelyek
+                            meghatározzák a projekt kimenetelét és sikerét. Az alábbiakban néhány fontos feltételezést
+                            és függőséget mutatok be:
+                        <p>Feltételezések:</p>
+                        <p>Kreatív elképzelés: A projekt alapjául szolgál egy kreatív játékterv, amely magában foglalja
+                            a játék stílusát, játékmenetét és szinttervezését.
+                            Játékfejlesztők kompetenciája: Feltételezzük, hogy a játékfejlesztők rendelkeznek a
+                            szükséges kompetenciákkal és ismeretekkel a Godot motort, C# programozást és az Access
+                            adatbázist illetően.
+                        <p>Rendelkezésre álló idő és erőforrások: Feltételezzük, hogy a projekt elvégzéséhez elegendő
+                            idő és erőforrások állnak rendelkezésre.</p>
+                        <p>Piackutatás és célközönség: A játékfejlesztés során feltételezzük, hogy az alapos piackutatás
+                            során meghatározzuk a célközönséget és annak igényeit.</p>
+                        <p>Függőségek:
+                            Godot motor és C# programozás: A játékfejlesztés függ a Godot motor és a C# programozás
+                            helyes
+                            használatától. Az eszközök és kódolási gyakorlatokra való támaszkodás szükséges.
+                            Grafikai tervezés és karakterkészítés: A Photoshop és Illustrator alkalmazások rendelkezésre
+                            állására van szükség a játék grafikájának és karakterek készítéséhez.</p>
+                        <p>Adatbáziskezelés és tárolás: Az Access adatbázisnak megfelelően kell működnie az adatok
+                            tárolásához és kezeléséhez. Az adatbázisban tárolt információk kulcsfontosságúak lehetnek a
+                            játékmenet és az eredmények kezelésében.</p>
+                        <p>Tesztelés és felhasználói visszajelzések: A játék tesztelése és a játékosok visszajelzései
+                            meghatározóak a játék minőségének és felhasználói élményének javításához.</p>
+                        <p>Projektmenedzsment: A projekt sikerét befolyásolja a megfelelő projektmenedzsment és a
+                            határidők
+                            betartása. A projektmenedzser feladata az erőforrások hatékony kezelése és a projekt
+                            előrehaladásának nyomon követése.</p>
+                        <p>Tervezés és dokumentáció: A játékmenet tervezésének és a dokumentáció elkészítésének hiánya a
+                            projekt meghiúsulásához vezethet.</p>
+                        <p>Marketing és promóció: A játék népszerűsítése és piacra dobása kulcsfontosságú a sikerhez.
+                            Ennek
+                            részeként a marketing és promóció tervezése és végrehajtása függ a projekt sikerétől.
+                            A feltételezések és függőségek pontosan megvizsgálásra és kezelésre szorulnak a projekt
+                            során,
+                            hogy a rage game fejlesztése zökkenőmentesen haladhasson és a kívánt eredményeket hozza.</p>
+                        <p class="lead">4.4. Költségbecslés</p>
+                        <p>A játész elkészítéséhez szükséges programok ára, nagyságrendileg 20.000 Ft lesz, számolva
+                            azzal hogy gyorsan akarjuk leprogramozni, így optimális esetben nem kell hónapokon keresztül
+                            bizonyos programok licenszét megvenni.
+                            Mi magunk nem szeretnék a programból pénzt kivenni, csupán szórakozás céljából csináljuk.
+                            Ha a programot piacra dobnánk, fizetni kell a különböző áruházaknak, hogy a játékunk
+                            szerepeljen náluk, ez nagyjából szintén 20.000 Ft lenne.</p>
+                        <p class="lead">4.5 Installáció</p>
+                        <p>A játékot úgy tervezzük elkészíteni, hogy annak telepítése ne igényeljen a szokásosnál több
+                            lépést, így bárki által könnyen telepíthetővé válik.
+                            Köszönhetően a játék egyszerűségének, a mérete sem lesz problémás, 100 MB-nál nem tervezzük
+                            nagyobbra.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- A végtermék jellemzői H2
+		============================ -->
+                    <section id="h2_avj">
+                        <h2>A végtermék jellemzői</h2>
+                        <p>A legmagasabb prioritás a játékmenet izgalmassá tétele. Igyekszünk nem annyira
+                            élvezhetetlenné tenni, hogy az ember megutálja. Jól kell adagolni
+                            a sikert és a nehézséget is. Fontos még az irányítás. A játékos többet foglalkozhat a
+                            játékkal, ha pörgős egyszerű írányítása van a karakternek,
+                            ezáltal javít a flow is. A játéknak egy minimális történetet is adunk majd, nem kell nagy
+                            dolgokra gondolni, csak egy alapvető céllal látjuk el a
+                            játékost, hogy indokoljuk a megannyi megpróbáltatást, ami rá vár. Ehhez hasonló lehet az
+                            első Super Mario, ahol annyit volt a történet, hogy meg
+                            kell mentenünk a hercegnőt.</p>
+                        <p>A vizuális és hanghatásokra is sokat kell fektetni. Több pályán külön-külön változatosabb
+                            pályadizájn, hogy folyamatosan fentartsa az
+                            érdeklődést. Az ellenfeleknek is változatosaknak kell lenniük, hogy elkerüljük a monoton
+                            játékélményt. Külön témájuk lehetnek a pályáknak,
+                            zenével is meglehet őket különböztetni, úgy ahogyan az ellenfeleket is. Egy adott bossnak-
+                            is ajánlott a külön zene választása.</p>
+                        <p>Valamilyen versengési lehetőséget is tervezünk beleépíteni a játékban. Ez azért lehet fontos,
+                            hogy ösztönözze a játékosokat egymás ellen. Továbbá többszöri
+                            kijátszásra is esélyt adhat. Erre a legjobb módszer egy beépített időmérő lenne és így a
+                            gyorsaságuk alapján lehetne rangsorolni a játékosokat. Ezt a képernyő
+                            valamelyik sarkában lenne optimális elhelyezni, hogy ne zavarja a játékot, de bármikor
+                            nyomon követhető legyen. Ki és bekapcsolási opcióval lehetne
+                            módosítani ezt a kijelzőt a beállításokban, azon játékosok számára, akik nem tartanak erre a
+                            szolgáltatásra igényt.</p>
+                        <p>Igyekszünk a játékot úgy optimalizálni, hogy minél alacsonyabbak legyenek a minimális
+                            rendszerkövetelmények és minél többen kitudják próbálni a játékot.</p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Korlátozások H2
+		============================ -->
+                    <section id="h2_kr">
+                        <h2>Korlátozások</h2>
+                        <p>A szoftver futtatásához a felhasználóknak rendelkeznie kell a már említett minimális
+                            rendszerkövetelményekkel. A szoftvert csak Windows operációs rendszeren
+                            lesz elérhető, később fejlesztésre kerülhet egy mobilos verzió is. A minimum, amit kérünk az
+                            operációs rendszerben legalább
+                            -bites, 4GB ram, egy core2-es CPU és egy GTX280. Ha ezek sajnos nem teljesülnek nem tudjuk
+                            garantálni a játék futását.
+                            Az élmény fokozása érdekében, a szoftvert érdemesebb jobb felbontású képernyővel futtatni.
+                        </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Minőségi elvárások H2
+		============================ -->
+                    <section id="h2_me">
+                        <h2>Minőségi elvárások</h2>
+                        <p>Válaszidő:
+                            Igyekszünk a modern igényeknek megfelelni és minimalizálni a válaszidőt. Ezzel segítve az
+                            esetleges speedrunokat, amelyekhez szükséges a gyors reagálás és reflexek is.
+                            Teljesítmény:
+                            Mivel az elsődleges a PC platformra szeretnénk kiadni a játék követelményeit is ehhez
+                            szabjuk majd. A játék olyan körülmények között fog futni, amelyek megfelelnek a mai
+                            hardvereknek.
+                            Felhasználó barátság:
+                            Próbáljuk a lehető legérthetőbb és legegyszerűbb menüt és leírást megcsinálni. Súgó
+                            létrehozásával tudunk segíteni a játékosnak az érthető játékmenet érdekében.
+                        </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Dokumentációkkal kapcsolatos követelmények H2
+		============================ -->
+                    <section id="h2_dkk">
+                        <h2>Dokumentációkkal kapcsolatos követelmények</h2>
+                        <p> </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Kockázat lista H2
+		============================ -->
+                    <section id="h2_kl">
+                        <h2>Kockázat lista</h2>
+                        <p> </p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Szótár H2
+		============================ -->
+                    <section id="h2_szt">
+                        <h2>Szótár/jelmagyarázat</h2>
+                        <ul class="changelog">
+                            <li><span class="badge badge-success">Added</span> Ez az ikon jelenik meg ha valami újdonság
+                                kerül be.</li>
+                            <li><span class="badge badge-danger">Fixed</span> Ez ikon jelenik meg ha valami hibát
+                                kijavítottunk.</li>
+                            <li><span class="badge badge-info">Updated</span> Ez az ikon jelenik meg ha valamit
+                                frissítettünk.</li>
+                        </ul>
+                    </section>
+
+                    <hr class="divider">
+                    <hr class="divider">
+
+                </div>
+            </div>
+        </div>
+        <!-- Content end -->
+    </div>
+    <!-- Footer
+  ============================ -->
+    <footer id="footer" class="section bg-dark footer-text-light">
+        <div class="container">
+            <p class="text-center">Copyright &copy; 2023 <a>Bakonyi Bakugánok</a>.
+                All Rights Reserved.</p>
+            <p class="text-2 text-center mb-0">Design &amp; Develop by <a>Szabó Marcell</a>.</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Document Wrapper end -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+            class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript
+============================ -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Highlight JS -->
+    <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+    <!-- Easing -->
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Script -->
+    <script src="assets/js/theme.js"></script>
 </body>
+
 </html>
